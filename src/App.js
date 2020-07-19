@@ -1,19 +1,22 @@
-import React, { Component } from 'react';
-import './App.css';
-import Main from './components/MainComponent';
-import { BrowserRouter } from 'react-router-dom';
+import React from "react";
 
-class App extends Component {
-  render() {
-    return (
-      <BrowserRouter>
-        <div className="App">
-          <Main />
-        </div>
-      </BrowserRouter>
-    )
-  }
+import NavMenu from "./components/NavMenu";
+import About from "./components/About";
+import Values from "./components/Values";
+import Services from "./components/Services";
+import Portfolio from "./components/Portfolio";
 
+import "./App.css";
+
+
+export default function App() {
+  return (
+    <React.Fragment>
+      <NavMenu />
+      <About />
+      <Values />
+      <Services />
+      <Portfolio />
+    </React.Fragment>
+  );
 }
-
-export default App;
