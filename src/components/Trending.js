@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 
-class About extends Component {
+class Trending extends Component {
   render() {
     return (
       <React.Fragment>
         <div id="about" className="container-fluid">
           <div className="row">
             <div className="col-sm-8">
-              <h2>About</h2>
+              <h2>Trending</h2>
               <h4>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -46,4 +46,4 @@ class About extends Component {
   }
 }
 
-export default About;
+export default Trending;
