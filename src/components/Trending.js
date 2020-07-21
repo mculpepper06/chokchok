@@ -4,7 +4,7 @@ class Trending extends Component {
   render() {
     return (
       <React.Fragment>
-        <div id="about" className="container-fluid">
+        <div id="trending" className="container-fluid" style={{ backgroundColor: "#FFF8C6" }}>
           <div className="row">
             <div className="col-sm-8">
               <h2>Trending</h2>
@@ -37,7 +37,7 @@ class Trending extends Component {
               />
             </div>
             <button className="btn btn-outline-dark btn-lg">
-                FIND YOUR SHADE
+                SEE TRENDING
               </button>
           </div>
         </div>
