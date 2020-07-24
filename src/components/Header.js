@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import ShadeCalculator from './ShadeFinderPage'
 import {
     Navbar, NavbarBrand
 } from 'reactstrap';
 
 
-class Main extends Component {
+class Header extends Component {
     render() {
         return (
             <React.Fragment>
@@ -17,7 +16,7 @@ class Main extends Component {
 
                 <div className="jumbotron text-center">
                     <h1>Your Bridge Between Western and Asian Makeup</h1>
-                    <p>We specialize in blablabla</p>
+                    
                 </div>
             </React.Fragment>
 
@@ -25,4 +24,4 @@ class Main extends Component {
     }
 }
 
-export default Main;
+export default Header;
