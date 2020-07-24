@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class ShadeFinder extends Component {
   render() {
@@ -36,11 +37,17 @@ class ShadeFinder extends Component {
                 height="200"
               />
             </div>
+            
             <button className="btn btn-outline-dark btn-lg">
                 FIND YOUR SHADE
               </button>
           </div>
         </div>
+        <Link to="/shaderfinder">
+     <button type="btn btn-outline-dark btn-lg">
+          Click Me!
+     </button>
+ </Link>
       </React.Fragment>
     );
   }

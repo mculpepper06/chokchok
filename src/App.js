@@ -10,14 +10,15 @@ import About from "./components/About";
 import "./App.css";
 import "./Scripts/slideAnimation";
 
+
 export default function App() {
   return (
     <React.Fragment>
-      <Main />
       <ShadeFinder />
       <Trending />
       <Shop />
       <About />
+      <Main />
     </React.Fragment>
   );
 }

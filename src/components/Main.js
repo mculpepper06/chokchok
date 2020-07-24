@@ -1,7 +1,9 @@
 import React, { Component } from "react";
+import ShadeCalculator from './ShadeFinderPage'
 import {
-    Navbar, NavbarBrand, Nav
+    Navbar, NavbarBrand
 } from 'reactstrap';
+
 
 class Main extends Component {
     render() {
@@ -9,7 +11,7 @@ class Main extends Component {
             <React.Fragment>
                 <Navbar dark sticky="top" expand="md">
                     <NavbarBrand className="mr-auto" href="/"><img src="/assets/images/logo.png" height="70" width="70" alt="Logo" /></NavbarBrand>
-                   
+
                 </Navbar>
 
 
