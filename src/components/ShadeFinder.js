@@ -1,46 +1,40 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class ShadeFinder extends Component {
   render() {
     return (
       <React.Fragment>
-        <div id="about" className="container-fluid">
+        <div id="about" className="container-fluid" >
           <div className="row">
             <div className="col-sm-8">
               <h2>Shade Finder</h2>
               <h4>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                Skin Concerns, Finish, & Brands - We Take It All Into Account
               </h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+             Here at ChokChok we take every single detail into consideration to ensure you are getting the very best match
+             for your skin. Whether you are seeking a natural finish or full coverage, our system will match you with the closest and 
+             most natural shade for your skin tone. What are you waiting for? Get matched today!
               </p>
               <br />
            
             </div>
             <div className="col-sm-4">
               <img
-                src="https://images.pexels.com/photos/3912572/pexels-photo-3912572.jpeg"
+                src="https://images.unsplash.com/photo-1512495967160-4e815a64fba6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80"
                 alt="jpg"
                 width="200"
-                height="200"
+                height="300"
               />
             </div>
+            
             <button className="btn btn-outline-dark btn-lg">
-                FIND YOUR SHADE
+                FIND MY SHADE
               </button>
           </div>
         </div>
+       
       </React.Fragment>
     );
   }
