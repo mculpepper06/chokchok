@@ -1,6 +1,7 @@
 import React from "react";
 import Home from "./components/Home";
 import ShadeCalculator from "./components/ShadeCalculator";
+import Results from "./components/Results";
 import Header from "./components/Header";
 import "./App.css";
 import "./Scripts/slideAnimation";
@@ -14,6 +15,7 @@ export default function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/shadecalculator" component={ShadeCalculator} />
+          <Route path="/results" component={Results} />
         </Switch>
       </React.Fragment>
     </BrowserRouter>

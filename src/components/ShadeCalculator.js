@@ -1,102 +1,159 @@
 import React, { Component } from 'react'
-import { DropdownMultiple, Dropdown } from 'reactjs-dropdown-component';
+import { Dropdown } from 'reactjs-dropdown-component';
+import { Link } from "react-router-dom";
 
 class ShadeCalculator extends Component {
-    constructor(){
+  constructor() {
     super()
     this.state = {
-      location: [
+      brand: [
         {
           id: 0,
-          title: 'New York',
+          title: 'Too Faced',
           selected: false,
-          key: 'location'
+          key: 'brand'
         },
         {
           id: 1,
-          title: 'Dublin',
+          title: 'Fenty',
           selected: false,
-          key: 'location'
+          key: 'brand'
         },
         {
           id: 2,
-          title: 'California',
+          title: 'MAC',
           selected: false,
-          key: 'location'
+          key: 'brand'
         },
         {
           id: 3,
-          title: 'Istanbul',
+          title: 'Nars',
           selected: false,
-          key: 'location'
+          key: 'brand'
         },
         {
           id: 4,
-          title: 'Izmir',
+          title: 'Shiseido',
           selected: false,
-          key: 'location'
+          key: 'brand'
         },
         {
           id: 5,
-          title: 'Oslo',
+          title: 'Estee Lauder',
           selected: false,
-          key: 'location'
+          key: 'brand'
         },
         {
           id: 6,
-          title: 'Zurich',
+          title: 'Dior',
           selected: false,
-          key: 'location'
-        }
-      ],
-      fruit: [
-        {
-          id: 0,
-          title: 'Apple',
-          selected: false,
-          key: 'fruit'
-        },
-        {
-          id: 1,
-          title: 'Orange',
-          selected: false,
-          key: 'fruit'
-        },
-        {
-          id: 2,
-          title: 'Grape',
-          selected: false,
-          key: 'fruit'
-        },
-        {
-          id: 3,
-          title: 'Pomegranate',
-          selected: false,
-          key: 'fruit'
-        },
-        {
-          id: 4,
-          title: 'Strawberry',
-          selected: false,
-          key: 'fruit'
-        },
-        {
-          id: 5,
-          title: 'Banana',
-          selected: false,
-          key: 'fruit'
-        },
-        {
-          id: 6,
-          title: 'Blueberry',
-          selected: false,
-          key: 'fruit'
+          key: 'brand'
         },
         {
           id: 7,
-          title: 'Watermelon',
+          title: 'Charlotte Tilbury',
           selected: false,
-          key: 'fruit'
+          key: 'brand'
+        }
+      ],
+      product: [
+        {
+          id: 0,
+          title: 'Born This Way Foundation',
+          selected: false,
+          key: 'product'
+        },
+        {
+          id: 1,
+          title: "Pro Filt'r Hydrating Longwear Foundation",
+          selected: false,
+          key: 'product'
+        },
+        {
+          id: 2,
+          title: 'Studio Fix Fluid',
+          selected: false,
+          key: 'product'
+        },
+        {
+          id: 3,
+          title: 'Radiant Longwear Foundation',
+          selected: false,
+          key: 'product'
+        },
+        {
+          id: 4,
+          title: 'Synchro Skin Self-Refreshing Foundation SPF 30',
+          selected: false,
+          key: 'product'
+        },
+        {
+          id: 5,
+          title: 'Double Wear Stay-in-Place Foundation',
+          selected: false,
+          key: 'product'
+        },
+        {
+          id: 6,
+          title: 'Dior Forever Matte Foundation',
+          selected: false,
+          key: 'product'
+        },
+        {
+          id: 7,
+          title: 'Airbrush Flawless Longwear Foundation',
+          selected: false,
+          key: 'product'
+        }
+      ],
+      shade: [
+        {
+          id: 0,
+          title: 'Too Faced',
+          selected: false,
+          key: 'shade'
+        },
+        {
+          id: 1,
+          title: 'Fenty',
+          selected: false,
+          key: 'shade'
+        },
+        {
+          id: 2,
+          title: 'MAC',
+          selected: false,
+          key: 'shade'
+        },
+        {
+          id: 3,
+          title: 'Nars',
+          selected: false,
+          key: 'shade'
+        },
+        {
+          id: 4,
+          title: 'Shiseido',
+          selected: false,
+          key: 'shade'
+        },
+        {
+          id: 5,
+          title: 'Estee Lauder',
+          selected: false,
+          key: 'shade'
+        },
+        {
+          id: 6,
+          title: 'Dior',
+          selected: false,
+          key: 'shade'
+        },
+        {
+          id: 7,
+          title: 'Charlotte Tilbury',
+          selected: false,
+          key: 'shade'
         }
       ]
     }
@@ -140,45 +197,55 @@ class ShadeCalculator extends Component {
 
   render() {
     return (
-      <div className="App">
-        <p>Dropdown menu examples</p>
+      <React.Fragment>
 
-        <h3>Regular</h3>
+        <div className="App">
+          <h1 className="text-center">Shade Calculator</h1>
 
-        <div className="wrapper">
-          <DropdownMultiple
-            titleHelper="Location"
-            title="Select location"
-            list={this.state.location}
-            toggleItem={this.toggleItem}
-          />
+          <div className="row">
+            <div className="col-sm-4">
+              <p className="brand">Select the brand of foundation you currently wear.</p>
+              <Dropdown
+                searchable={["Search for a brand", "Brand does not exist"]}
+                titleHelper="Location"
+                title="Select a brand"
+                list={this.state.brand}
+                toggleItem={this.toggleItem}
+              />
 
-          <Dropdown
-            title="Select fruit"
-            list={this.state.fruit}
-            resetThenSet={this.resetThenSet}
-          />
+            </div>
+            <div className="col-sm-4">
+              <p>Select which product you use from this brand.</p>
+              <Dropdown
+                searchable={["Search for a product", "Product does not exist"]}
+                title="Select a product"
+                list={this.state.product}
+                resetThenSet={this.resetThenSet}
+              />
+            </div>
+            <div className="col-sm-4">
+              <p>Select which shade you use in this product.</p>
+              <Dropdown
+                searchable={["Search product shades", "Shade does not exist"]}
+                title="Select your shade"
+                list={this.state.shade}
+                resetThenSet={this.resetThenSet}
+              />
+            </div>
+          </div>
         </div>
 
-        <h3>Searchable</h3>
 
-        <div className="wrapper">
-          <DropdownMultiple
-            searchable={["Search for location", "No matching location"]}
-            titleHelper="Location"
-            title="Select location"
-            list={this.state.location}
-            toggleItem={this.toggleItem}
-          />
 
-          <Dropdown
-            searchable={["Search for fruit", "No matching fruit"]}
-            title="Select fruit"
-            list={this.state.fruit}
-            resetThenSet={this.resetThenSet}
-          />
-        </div>
-      </div>
+        <Link to='/results'>
+          <div className="row ml-4">
+          <button className="btn2 btn-primary btn-lg">
+            Submit
+              </button>
+              </div>
+        </Link>
+      </React.Fragment >
+
     );
   }
 }

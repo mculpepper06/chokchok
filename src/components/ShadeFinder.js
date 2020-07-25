@@ -5,6 +5,7 @@ class ShadeFinder extends Component {
   render() {
     return (
       <React.Fragment>
+        
         <div id="about" className="container-fluid" >
           <div className="row">
             <div className="col-sm-8">
