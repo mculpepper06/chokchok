@@ -1,26 +1,21 @@
 import React from "react";
-
-import Main from "./components/Header";
-import ShadeFinder from "./components/ShadeFinder";
-import Trending from "./components/Trending";
-import Shop from "./components/Shop";
-import About from "./components/About";
-
-
-
+import Home from "./components/Home";
+import ShadeCalculator from "./components/ShadeCalculator";
+import Header from "./components/Header";
 import "./App.css";
 import "./Scripts/slideAnimation";
-
-
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 export default function App() {
   return (
-    <React.Fragment>
-      <Main />
-      <ShadeFinder />
-      <Trending />
-      <Shop />
-      <About />
-    </React.Fragment>
+    <BrowserRouter>
+      <React.Fragment>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/shadecalculator" component={ShadeCalculator} />
+        </Switch>
+      </React.Fragment>
+    </BrowserRouter>
   );
 }

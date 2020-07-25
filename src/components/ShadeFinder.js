@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 class ShadeFinder extends Component {
   render() {
@@ -13,12 +13,12 @@ class ShadeFinder extends Component {
                 Skin Concerns, Finish, & Brands - We Take It All Into Account
               </h4>
               <p>
-             Here at ChokChok we take every single detail into consideration to ensure you are getting the very best match
-             for your skin. Whether you are seeking a natural finish or full coverage, our system will match you with the closest and 
-             most natural shade for your skin tone. What are you waiting for? Get matched today!
+                Here at ChokChok we take every single detail into consideration to ensure you are getting the very best match
+                for your skin. Whether you are seeking a natural finish or full coverage, our system will match you with the closest and
+                most natural shade for your skin tone. What are you waiting for? Get matched today!
               </p>
               <br />
-           
+
             </div>
             <div className="col-sm-4">
               <img
@@ -28,13 +28,15 @@ class ShadeFinder extends Component {
                 height="300"
               />
             </div>
-            
-            <button className="btn btn-outline-dark btn-lg">
+            <Link to='/shadecalculator'>
+              <button className="btn btn-outline-dark btn-lg">
                 FIND MY SHADE
               </button>
+            </Link>
+
           </div>
         </div>
-       
+
       </React.Fragment>
     );
   }
