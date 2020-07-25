@@ -10,17 +10,28 @@ import About from "./components/About";
 
 import "./App.css";
 import "./Scripts/slideAnimation";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import ShadeCalculator from "./components/ShadeCalculator";
 
 
 
 export default function App() {
   return (
     <React.Fragment>
+      
+      <BrowserRouter>
+      <Switch>
+      <Route path='/shadecalculator' component={ShadeCalculator} />
+
+      </Switch>
+      </BrowserRouter>
+
       <Main />
       <ShadeFinder />
       <Trending />
       <Shop />
       <About />
+     
     </React.Fragment>
   );
 }
