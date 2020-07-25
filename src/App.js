@@ -1,17 +1,18 @@
 import React from "react";
 
-import Main from "./components/Header";
+import Header from "./components/Header";
 import ShadeFinder from "./components/ShadeFinder";
 import Trending from "./components/Trending";
 import Shop from "./components/Shop";
 import About from "./components/About";
+import ShadeCalculator from "./components/ShadeCalculator";
 
 
 
 import "./App.css";
 import "./Scripts/slideAnimation";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import ShadeCalculator from "./components/ShadeCalculator";
+
 
 
 
@@ -26,7 +27,7 @@ export default function App() {
       </Switch>
       </BrowserRouter>
 
-      <Main />
+      <Header />
       <ShadeFinder />
       <Trending />
       <Shop />
@@ -35,3 +36,4 @@ export default function App() {
     </React.Fragment>
   );
 }
+ 
